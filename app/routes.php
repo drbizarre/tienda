@@ -11,7 +11,10 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Route::get('/', 'StoreController@showIndex');
+
+
+/*Route::get('template/{name}', function ($name) {
+   $name = ucwords(str_replace('-', ' ', $name));
+   return View::make('template')->with('name', $name); 
+});*/
